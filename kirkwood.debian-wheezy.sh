@@ -361,7 +361,7 @@ echo ""
 echo ""
 echo "# Starting debootstrap installation"
 
-/usr/sbin/debootstrap --verbose --no-check-gpg --arch=$ARCH --variant=$VARIANT --include=$EXTRA_PACKAGES $RELEASE $ROOT $DEB_MIRROR
+/usr/sbin/debootstrap --verbose --arch=$ARCH --variant=$VARIANT --include=$EXTRA_PACKAGES $RELEASE $ROOT $DEB_MIRROR
 
 if [ "$?" -ne "0" ]; then
   echo "debootstrap failed."
